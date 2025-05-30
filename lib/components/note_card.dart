@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
-// import 'package:intl/intl.dart';
+import 'package:intl/intl.dart';
 import '../model/note.dart';
 
 class NoteCard extends StatelessWidget {
@@ -25,20 +25,20 @@ class NoteCard extends StatelessWidget {
           color: color,
           child: ListTile(
             //
-            // title: Text(note.tilte, style: kTitleTextStyle),
-            // subtitle: Text(
-            //   '${note.descripion}\n${DateFormat('yyyy-MM-dd').format(note.dateTime)}',
-            //
-            //   style: kSubTitleTextStyle,
-            // ),
-            // isThreeLine: true,
-            // trailing: IconButton(
-            //   onPressed: onPressed,
-            //   icon: Icon(
-            //     Icons.remove_circle_outline_outlined,
-            //     color: Colors.grey.shade700,
-            //   ),
-            // ),
+            title: Text(note.title, style: kTitleTextStyle),
+            subtitle: Text(
+              '${note.description}\n${DateFormat('yyyy-MM-dd').format(note.dateTime)}',
+
+              style: kSubTitleTextStyle,
+            ),
+            isThreeLine: true,
+            trailing: IconButton(
+              onPressed: onPressed,
+              icon: Icon(
+                Icons.remove_circle_outline_outlined,
+                color: Colors.grey.shade700,
+              ),
+            ),
           ),
         ),
       ),
