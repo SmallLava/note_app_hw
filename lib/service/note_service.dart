@@ -1,8 +1,8 @@
-import 'package:note_app_hw/Model/note.dart';
+import 'package:note_app_hw/model/note.dart';
 
 class NoteService {
   //_ -> 設private
-  final List<Note> _notes = [
+  List<Note> _notes = [
     Note(
       title: '📌 Regularization Techniques in Deep Learning',
       description:
@@ -35,7 +35,7 @@ class NoteService {
   List<Note> get notes => _notes;
 
   void deleteNote({required int index}) {
-    notes.removeAt(index);
+    _notes.removeAt(index);
   }
 
   void addNote({required String title, required String description}) {
